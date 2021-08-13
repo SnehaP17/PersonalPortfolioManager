@@ -2,10 +2,11 @@ package com.conygre.citi.PortfolioManager.entities;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="invesment")
-public class Invesment {
+public class Invesment implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
