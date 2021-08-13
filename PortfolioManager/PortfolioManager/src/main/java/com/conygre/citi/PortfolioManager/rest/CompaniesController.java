@@ -19,7 +19,7 @@ public class CompaniesController {
 
 
     @GetMapping
-    public Collection<Companies> getMovies() {
+    public Collection<Companies> getCompanies() {
         return companiesService.getAllCompanies();
     }
 }

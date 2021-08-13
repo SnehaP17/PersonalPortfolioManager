@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Collection;
 
 public interface CompaniesRepository extends JpaRepository<Companies,Integer> {
-    Collection<Companies> findByCompany_name(String title);
+//    Collection<Companies> findBycompany_name(String title);
 }
