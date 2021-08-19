@@ -19,4 +19,10 @@ public class CompaniesServiceImpl implements CompaniesService{
     public Collection<Companies> getAllCompanies() {
         return companiesRepository.findAll();
     }
+
+    @Override
+    @Transactional
+    public Collection<Companies> getTopFive(){
+        return companiesRepository.findTopFive();
+    }
 }

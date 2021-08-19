@@ -15,7 +15,7 @@ public class Companies implements Serializable{
     @Column(name="company_name")
     private String companyName;
     @Column(name="percent_change")
-    private String percentChange;
+    private Integer percentChange;
 
     public int getId() {
         return id;
@@ -25,19 +25,19 @@ public class Companies implements Serializable{
         this.id = id;
     }
 
-    public String getCompany_name() {
+    public String getCompanyName() {
         return companyName;
     }
 
-    public void setCompany_name(String company_name) {
-        this.companyName = company_name;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
-    public String getPercentChange() {
+    public Integer getPercentChange() {
         return percentChange;
     }
 
-    public void setPercentChange(String value) {
+    public void setPercentChange(Integer value) {
         this.percentChange = value;
     }
 }
