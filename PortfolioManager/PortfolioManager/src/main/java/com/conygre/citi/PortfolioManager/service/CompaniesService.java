@@ -6,4 +6,6 @@ import java.util.Collection;
 
 public interface CompaniesService {
     Collection<Companies> getAllCompanies();
+//    Collection<Companies> getAllCash();
+
 }
