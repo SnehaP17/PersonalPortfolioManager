@@ -1,6 +1,8 @@
 FROM maven:3.6.3-openjdk-11 AS compile
-COPY . PortfolioManager/PortfolioManager
-WORKDIR PortfolioManager/PortfolioManager
+COPY pom.xml /tmp/
+COPY src /tmp/src/
+WORKDIR /tmp/
+
 RUN mvn -Dmaven.test.skip=true clean package
 
 FROM openjdk:11
