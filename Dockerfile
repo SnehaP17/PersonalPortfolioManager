@@ -1,7 +1,7 @@
 FROM maven:3.6.3-openjdk-11 AS compile
-COPY pom.xml /tmp/
-COPY src /tmp/src/
-WORKDIR /tmp/
+COPY PortfolioManager/PortfolioManager/pom.xml pom.xml
+COPY PortfolioManager/PortfolioManager/src src
+# WORKDIR /tmp/
 
 RUN mvn -Dmaven.test.skip=true clean package
 
@@ -13,3 +13,4 @@ COPY --from=compile PortfolioManager/PortfolioManager/target/PortfolioManager-0.
 EXPOSE 8080
 ENV JAVA_OPTS=""
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/urandom -jar /app.jar" ]
+
