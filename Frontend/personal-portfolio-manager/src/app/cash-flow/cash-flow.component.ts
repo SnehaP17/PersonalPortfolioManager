@@ -9,17 +9,25 @@ import { ApicallsService } from 'src/service/apicalls.service';
 export class CashFlowComponent implements OnInit {
 
   cashRes:any = null;
-
+  cashSum:any = null;
   constructor(private apiCallsService:ApicallsService) { }
 
   ngOnInit(): void {
     this.getCash();
+    this.getCashSum();
   }
 
   getCash(){
     this.apiCallsService.getCash()
     .subscribe((data) => {
       this.cashRes = data; 
+    });
+  }
+
+  getCashSum(){
+    this.apiCallsService.getCashSum()
+    .subscribe((res) => {
+      this.cashSum = res; 
     });
   }
 

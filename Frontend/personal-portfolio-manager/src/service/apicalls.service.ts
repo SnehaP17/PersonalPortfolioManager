@@ -26,8 +26,18 @@ export class ApicallsService {
   return res;
  }
 
+ getInvestmentSum(){
+  let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/invesment/sum`);
+  return res;
+ }
+
  getCash(){
   let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/cash`);
+  return res;
+ }
+
+ getCashSum(){
+  let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/cash/sum`);
   return res;
  } 
 
