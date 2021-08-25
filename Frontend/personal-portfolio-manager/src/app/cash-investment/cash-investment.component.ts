@@ -27,7 +27,6 @@ export class CashInvestmentComponent implements OnInit {
   getInvestmentSum(){
     this.apiCallsService.getInvestmentSum()
     .subscribe((res) => {
-      console.log(`res is ${res}`)
       this.investmentSum = res; 
     });
   }
