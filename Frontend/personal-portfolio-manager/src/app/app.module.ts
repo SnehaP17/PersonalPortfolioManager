@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { CashFlowComponent } from './cash-flow/cash-flow.component';
 import { NetWorthComponent } from './net-worth/net-worth.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { NetWorthComponent } from './net-worth/net-worth.component';
     CashInvestmentComponent,
     MarketMoversComponent,
     CashFlowComponent,
-    NetWorthComponent
+    NetWorthComponent,
+    DoughnutChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
