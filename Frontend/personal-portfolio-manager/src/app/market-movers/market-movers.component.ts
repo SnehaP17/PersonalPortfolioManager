@@ -9,7 +9,7 @@ import { ApicallsService } from 'src/service/apicalls.service';
 export class MarketMoversComponent implements OnInit {
   
   gainersRes:any = null;
-  paramsObj:any = {name:'', id:1};
+  paramsObj:any = {companyName:'', id:1};
 
   constructor(private apiCallsService:ApicallsService) { }
 

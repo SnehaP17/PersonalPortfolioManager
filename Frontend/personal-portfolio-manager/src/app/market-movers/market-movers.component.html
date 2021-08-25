@@ -1,4 +1,5 @@
 <section>
     <h2>Your Gainers</h2>
     <p >{{gainersRes | json}}</p>
+    <p *ngFor="let i of gainersRes">Name: {{i.companyName}}</p>
 </section>
