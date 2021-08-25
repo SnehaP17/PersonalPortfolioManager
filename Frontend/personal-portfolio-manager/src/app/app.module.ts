@@ -9,6 +9,7 @@ import { CashFlowComponent } from './cash-flow/cash-flow.component';
 import { NetWorthComponent } from './net-worth/net-worth.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChartsModule } from 'ng2-charts';
     MarketMoversComponent,
     CashFlowComponent,
     NetWorthComponent,
-    DoughnutChartComponent
+    DoughnutChartComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
