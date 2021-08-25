@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApicallsService } from 'src/service/apicalls.service';
 
 @Component({
   selector: 'app-cash-flow',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CashFlowComponent implements OnInit {
 
-  constructor() { }
+  cashRes:any = null;
+
+  constructor(private apiCallsService:ApicallsService) { }
 
   ngOnInit(): void {
+    this.getCash();
+  }
+
+  getCash(){
+    this.apiCallsService.getCash()
+    .subscribe((data) => {
+      this.cashRes = data; 
+    });
   }
 
 }
