@@ -7,13 +7,11 @@ import com.conygre.citi.PortfolioManager.service.CashService;
 import com.conygre.citi.PortfolioManager.service.CompaniesService;
 import com.conygre.citi.PortfolioManager.service.InvesmentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/invesment")
 public class InvesmentController {

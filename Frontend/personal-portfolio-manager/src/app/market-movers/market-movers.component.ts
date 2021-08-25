@@ -14,6 +14,7 @@ export class MarketMoversComponent implements OnInit {
   constructor(private apiCallsService:ApicallsService) { }
 
   ngOnInit(): void {
+    this.getMarketGainers();
   }
 
   getMarketGainers(){

@@ -9,7 +9,7 @@ export class ApicallsService {
   constructor(private http:HttpClient) { }
 
  getCompanyGainers(){
-  let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/companies/topfive
+  let res = this.http.get(`http://localhost:8080/companies/topfive
   `);
   console.log(`res is ${JSON.stringify(res)}`)
   return res;
