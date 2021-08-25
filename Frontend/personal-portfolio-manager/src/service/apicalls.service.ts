@@ -15,15 +15,20 @@ export class ApicallsService {
   return res;
  } 
 
-//  getCompanyLosers(){
-//   let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/companies/bottomfive
-//   `);
-//   return res;
-//  } 
+ getCompanyLosers(){
+  let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/companies/bottomfive
+  `);
+  return res;
+ } 
 
-//  getSwapiData(params: { category: string; id: any }){
-//   let ret = this.http.get(`https://swapi.dev/api/${params.category}/${params.id}`);
-//   console.log(ret);
-//   return ret;
-// }
+ getInvestment(){
+  let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/invesment`);
+  return res;
+ }
+
+ getCash(){
+  let res = this.http.get(`http://personalportfoliomanager-personalportfoliomanager.namdevops23.conygre.com/cash`);
+  return res;
+ } 
+
 }

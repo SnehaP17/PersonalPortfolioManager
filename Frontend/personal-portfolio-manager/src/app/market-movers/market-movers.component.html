@@ -1,5 +1,6 @@
 <section>
     <h2>Your Gainers</h2>
-    <p >{{gainersRes | json}}</p>
-    <p *ngFor="let i of gainersRes">Name: {{i.companyName}}</p>
+    <p *ngFor="let i of gainersRes">Name: {{i.companyName}} {{i.percentChange}}%</p>
+    <h2>Your Losers</h2>
+    <p *ngFor="let i of losersRes">Name: {{i.companyName}} {{i.percentChange}}%</p>
 </section>
