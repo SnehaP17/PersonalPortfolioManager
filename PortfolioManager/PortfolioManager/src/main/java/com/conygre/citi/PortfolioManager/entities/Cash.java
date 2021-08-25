@@ -22,6 +22,10 @@ public class Cash implements Serializable {
     private String companyName;
     @Column(name="amount")
     private String amount;
+    @Column(name="day_created")
+    private String dayCreated;
+    @Column(name="time_created")
+    private String time;
 
     public int getId() {
         return id;
@@ -61,5 +65,21 @@ public class Cash implements Serializable {
 
     public void setAmount(String amount) {
         this.amount = amount;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTimeString (String time) {
+        this.time = time;
+    }
+
+    public String getDayCreated() {
+        return dayCreated;
+    }
+
+    public void setDayCreated(String dayCreated) {
+        this.dayCreated = dayCreated;
     }
 }

@@ -19,6 +19,10 @@ public class Invesment implements Serializable {
     private int amount;
     @Column(name="account_type")
     private String accountType;
+    @Column(name="day_created")
+    private String dayCreated;
+    @Column(name="time_created")
+    private String time;
 
     public int getId() {
         return id;
@@ -50,5 +54,20 @@ public class Invesment implements Serializable {
 
     public void setAccountType(String accountType) {
         this.accountType = accountType;
+    }
+    public String getTime() {
+        return time;
+    }
+
+    public void setTimeString (String time) {
+        this.time = time;
+    }
+
+    public String getDayCreated() {
+        return dayCreated;
+    }
+
+    public void setDayCreated(String dayCreated) {
+        this.dayCreated = dayCreated;
     }
 }
