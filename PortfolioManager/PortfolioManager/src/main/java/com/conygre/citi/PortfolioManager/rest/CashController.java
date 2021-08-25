@@ -8,6 +8,7 @@ import com.conygre.citi.PortfolioManager.service.CompaniesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -22,5 +23,10 @@ public class CashController {
     @GetMapping
     public Collection<Cash> getCash() {
         return cashService.getAllCash();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/sum")
+    public Integer getCashSum() {
+        return cashService.getCashSum();
     }
 }

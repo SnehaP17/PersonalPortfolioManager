@@ -25,4 +25,10 @@ public class CompaniesServiceImpl implements CompaniesService{
     public Collection<Companies> getTopFive(){
         return companiesRepository.findTopFive();
     }
+
+    @Override
+    @Transactional
+    public Collection<Companies> getBottomFive(){
+        return companiesRepository.findBottomFive();
+    }
 }

@@ -6,4 +6,5 @@ import java.util.Collection;
 
 public interface InvesmentService {
     Collection<Invesment> getAllInvesments();
+    Integer getInvestmentSum();
 }

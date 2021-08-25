@@ -15,4 +15,11 @@ public interface CompaniesRepository extends JpaRepository<Companies,Integer> {
     /*SELECT percent_change,company_name FROM Companies ORDER BY percent_change ASC LIMIT 5*/
     @Query(value = "SELECT * FROM companies ORDER BY percent_change DESC LIMIT 5  ", nativeQuery = true)
     Collection<Companies> findTopFive();
+
+    //get losers
+    @Query(value = "SELECT * FROM companies ORDER BY percent_change ASC LIMIT 5  ", nativeQuery = true)
+    Collection<Companies> findBottomFive();
+
+
+
 }

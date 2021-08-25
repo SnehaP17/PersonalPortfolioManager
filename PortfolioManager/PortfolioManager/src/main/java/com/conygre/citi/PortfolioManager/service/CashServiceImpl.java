@@ -22,4 +22,10 @@ public class CashServiceImpl implements CashService {
     public Collection<Cash> getAllCash() {
         return cashRepository.findAll();
     }
+
+    @Override
+    @Transactional
+    public Integer getCashSum(){
+        return cashRepository.findCashSum();
+    }
 }

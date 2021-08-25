@@ -28,4 +28,9 @@ public class CompaniesController {
     public Collection<Companies> getTopFive() {
         return companiesService.getTopFive();
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/bottomfive")
+    public Collection<Companies> getBottomFive() {
+        return companiesService.getBottomFive();
+    }
 }

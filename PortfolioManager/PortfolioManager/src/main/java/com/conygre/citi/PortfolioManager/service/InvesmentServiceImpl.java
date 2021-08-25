@@ -20,4 +20,10 @@ public class InvesmentServiceImpl implements InvesmentService {
     public Collection<Invesment> getAllInvesments() {
         return invesmentRepository.findAll();
     }
+
+    @Override
+    @Transactional
+    public Integer getInvestmentSum(){
+        return invesmentRepository.findInvestmentSum();
+    }
 }

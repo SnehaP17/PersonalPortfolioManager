@@ -12,4 +12,6 @@ public interface CompaniesService {
 
     Collection<Companies> getTopFive();
 
+    Collection<Companies> getBottomFive();
+
 }
