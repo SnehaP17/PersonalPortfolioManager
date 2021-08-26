@@ -233,3 +233,20 @@
   .carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
   }
+
+  .header_center{
+    text-align: center;
+  }
+
+  .page_background{
+    background-color: rgb(25, 144, 212);
+    color: black;
+  }
+
+  .col-start{
+    color: black;
+  }
+
+  .col-end{
+    border-left: 5pt;
+  }
