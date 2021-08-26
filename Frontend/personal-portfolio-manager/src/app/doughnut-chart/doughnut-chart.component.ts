@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
 import { ApicallsService } from 'src/service/apicalls.service';
+import { NetWorthComponent } from '../net-worth/net-worth.component';
 
 @Component({
   selector: 'app-doughnut-chart',
@@ -12,36 +13,39 @@ export class DoughnutChartComponent implements OnInit {
 
   cashNum:any = null;
   investmentNum:any = null;
+  networth:any = null;
   constructor(private apiCallsService:ApicallsService) { }
 
-  ngOnInit():void {
-    //this.getCashSum()
-    //this.getInvestmentSum()
-  }
-
-  //getCashSum(){
-  //  this.apiCallsService.getCashSum()
-  //  .subscribe((res) => {
-  //    this.cashNum = res; 
-  //  });
-  //}
-
-  //getInvestmentSum(){
-  //  this.apiCallsService.getInvestmentSum()
-  //  .subscribe((res) => {
-  //    this.investmentNum = res; 
-  //  });
-  //}
-
-
-
-  doughnutChartLabels: Label[] = ['cash1', 'cash2', 'cash3'];
-  doughnutChartData: MultiDataSet = [[34,56,333]]
+  doughnutChartLabels: Label[] = ['cash', 'investment'];
+  doughnutChartData: MultiDataSet = [[this.cashNum, this.investmentNum]]
   doughnutChartType: ChartType = 'doughnut';
   
 
-  
+  ngOnInit():void {
+    this.cashNum = this.getCashSum()
+  }
+
+  getCashSum(){
+    this.apiCallsService.getCashSum()
+    .subscribe((res) => {
+      this.cashNum = res; 
+      console.log(res)
+      this.getInvestmentSum()
+    });
+  }
+
+  getInvestmentSum(){
+    this.apiCallsService.getInvestmentSum()
+    .subscribe((res) => {
+      this.investmentNum = res; 
+      this.doughnutChartData = [[this.cashNum, this.investmentNum]]
+      this.networth = this.cashNum + this.investmentNum
+    });
+  }
 }
+  
+  
+
 
 
 
