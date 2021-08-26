@@ -1,18 +1,23 @@
 <section>
-    <h2>
-        Cash &nbsp; ${{cashSum}}
-    </h2>
-    <hr>
-    <div>
-        <ul *ngFor="let i of cashRes" class="list-group">
-            <li class="list-group-item">
-                <p style="text-align:left;">
-                    {{i.companyName}}  &nbsp;  
-                    <span style="float:right;">
-                    ${{i.amount}} {{i.accountType}}  &nbsp;  <br>Time: 12 mins
-                    </span>
-                </p>
-            </li>
-        </ul>
-    </div>
+    <mat-expansion-panel (opened)="panelOpen = true"
+    (closed)="panelOpen = false">
+     <mat-expansion-panel-header>
+        <mat-panel-title >
+           <p style="text-align:left;"> Cash &nbsp; <span style="float:right;">${{cashSum}}</span></p>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+            <div>
+                <ul *ngFor="let i of cashRes" class="list-group">
+                    <li class="list-group-item">
+                        <p style="text-align:left;">
+                            {{i.companyName}}  &nbsp;  
+                            <span style="float:right;">
+                            ${{i.amount}} {{i.accountType}}  &nbsp;  <br>Time: 12 mins
+                            </span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+    </mat-expansion-panel>
 </section>
