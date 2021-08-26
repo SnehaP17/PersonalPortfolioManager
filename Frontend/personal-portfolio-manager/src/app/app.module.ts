@@ -14,6 +14,8 @@ import { OtherDoughnutChartComponent } from './other-doughnut-chart/other-doughn
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
+import { LineChartTwoComponent } from './line-chart-two/line-chart-two.component';
+import { LineChartThreeComponent } from './line-chart-three/line-chart-three.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import {MatInputModule} from '@angular/material/input';
     DoughnutChartComponent,
     LineChartComponent,
     OtherDoughnutChartComponent,
+    LineChartTwoComponent,
+    LineChartThreeComponent,
   ],
   imports: [
     BrowserModule,
