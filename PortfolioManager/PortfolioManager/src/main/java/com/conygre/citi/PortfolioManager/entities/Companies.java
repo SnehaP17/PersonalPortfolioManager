@@ -16,6 +16,8 @@ public class Companies implements Serializable{
     private String companyName;
     @Column(name="percent_change")
     private Integer percentChange;
+    @Column(name="stock_price")
+    private String stockPrice;
 
     public int getId() {
         return id;
@@ -40,4 +42,13 @@ public class Companies implements Serializable{
     public void setPercentChange(Integer value) {
         this.percentChange = value;
     }
+
+    public String getStockPrice() {
+        return stockPrice;
+    }
+
+    public void setStockPrice(String stockPrice) {
+        this.stockPrice = stockPrice;
+    }
+
 }
