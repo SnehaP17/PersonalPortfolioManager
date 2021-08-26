@@ -1,12 +1,12 @@
 <section>
   <section>
-    <h2>Market Movers</h2>
-    <mat-button-toggle-group [(ngModel)]="viewPrice" aria-label="Font Style">
-  
-      <mat-button-toggle value="stockPrice">$</mat-button-toggle>
+    <h2 class="market-movers-header">Market Movers
+    <mat-button-toggle-group [(ngModel)]="viewPrice" aria-label="Font Style" class="toggle_btn">
       <mat-button-toggle value="percentChange">%</mat-button-toggle>
+      <mat-button-toggle value="stockPrice">$</mat-button-toggle>
     </mat-button-toggle-group>
-    </section>
+  </h2>
+  </section>
     <hr>
     <section>
         <mat-expansion-panel>
