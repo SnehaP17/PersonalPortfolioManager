@@ -4,19 +4,29 @@
     (closed)="panelOpenState = false"
   >
     <mat-expansion-panel-header>
-      <mat-panel-title> Cash &nbsp; ${{ cashSum }} </mat-panel-title>
+      <mat-panel-title id="cash"> 
+        <div>Cash</div> 
+        <div>${{ cashSum }}</div>
+      </mat-panel-title>
     </mat-expansion-panel-header>
+    
     <div>
-      <ul *ngFor="let i of cashRes" class="list-group">
-        <li class="list-group-item">
-          <p style="text-align: left">
-            {{ i.companyName }} &nbsp;
-            <span style="float: right">
-              ${{ i.amount }} {{ i.accountType }} &nbsp; <br />Time: 12 mins
-            </span>
+      <ul *ngFor="let i of cashRes"  class="list-group" >
+        <ul style="list-style-type:none;" class="list-group-item">
+          <p id='cash'>
+            <li>{{ i.companyName }}</li>
+            <li>${{ i.amount }}</li>
+            
           </p>
-        </li>
+          <p id='cash' style='line-height: 0.5'>
+            <li>{{ i.accountType }}</li>  
+            <li>Time: 12 mins</li>
+          </p>
+        </ul>
       </ul>
     </div>
+    
+    
   </mat-expansion-panel>
 </section>
+

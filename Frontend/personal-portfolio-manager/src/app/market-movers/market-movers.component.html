@@ -1,21 +1,29 @@
 <section>
     <section>
-        <h2>Your Gainers</h2>
+        <hr>
+        <h5>YOUR GAINERS</h5>
         <hr>
         <ul *ngFor="let i of gainersRes" class="list-group">
-            <li class="list-group-item">
-                <p>Name: {{i.companyName}} {{i.percentChange}}%</p>
-            </li>
+            <ul style="list-style-type:none;" class="list-group-item">
+                <p id='market-movers'>
+                    <li>{{i.companyName}}</li>
+                    <li>{{i.percentChange}}%</li>
+                </p>
+            </ul>
         </ul>
     </section>
 
     <section>
-        <h2>Your Losers</h2>
+        <hr>
+        <h5>YOUR LOSERS</h5>
         <hr>
         <ul *ngFor="let i of losersRes" class="list-group">
-            <li class="list-group-item">
-                <p>Name: {{i.companyName}} {{i.percentChange}}%</p>
-            </li>
+            <ul style="list-style-type:none;" class="list-group-item">
+                <p id='market-movers'>
+                    <li>{{i.companyName}}</li>
+                    <li>{{i.percentChange}}%</li>
+                </p>
+            </ul>
         </ul>
     </section>
 </section>

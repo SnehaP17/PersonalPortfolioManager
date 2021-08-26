@@ -2,3 +2,10 @@ div {display:inline-block;
     height: 200px;
     width: 80%;
 }
+
+#market-movers {
+    display: flex;
+    justify-content: space-between;
+  }
+
+ 
