@@ -1,8 +1,18 @@
 <section>
-    <h2>Investment  &nbsp; ${{investmentSum}}</h2>
-    <p *ngFor="let i of investmentRes"
-    style="border-bottom: 3px solid grey;">
-        {{i.companyName}} &nbsp; {{i.amount}}<br>{{i.accountType}} &nbsp; 12 mins
-    </p>
-
+    <h2>
+        Investment  &nbsp; ${{investmentSum}}
+    </h2>
+    <hr>
+    <div>
+        <ul *ngFor="let i of investmentRes" class="list-group">
+            <li class="list-group-item">
+                <p style="text-align:left;">
+                    {{i.companyName}} &nbsp; 
+                    <span style="float:right;">
+                    ${{i.amount}} {{i.accountType}} &nbsp; <br>Time: 12 mins
+                    </span>
+                </p>
+            </li>
+        </ul>
+    </div>
 </section>

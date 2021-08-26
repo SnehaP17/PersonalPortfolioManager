@@ -14,6 +14,7 @@ import { OtherDoughnutChartComponent } from './other-doughnut-chart/other-doughn
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import {MatAutocompleteModule} from '@angular/material/autocomplete';
 // import {MatBadgeModule} from '@angular/material/badge';
 // import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
@@ -85,7 +86,8 @@ import {MatInputModule} from '@angular/material/input';
     ChartsModule,
     NoopAnimationsModule,
     MatExpansionModule,
-    MatInputModule
+    MatInputModule,
+    NgbModule
     // BrowserAnimationsModule
   ],
   providers: [],
