@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { CashFlowComponent } from './cash-flow/cash-flow.component';
 import { NetWorthComponent } from './net-worth/net-worth.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NetWorthComponent } from './net-worth/net-worth.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
