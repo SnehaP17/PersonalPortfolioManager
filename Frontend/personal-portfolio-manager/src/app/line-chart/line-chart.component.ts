@@ -11,7 +11,7 @@ import { Color, Label } from 'ng2-charts';
 export class LineChartComponent implements OnInit {
 
   lineChartData: ChartDataSets[] = [
-    { data: [850, 782, 788, 75, 7887, 785], label: '' },
+    { data: [850, 782, 788, 175, 7887, 785], label: '' },
   ];
 
   lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
@@ -24,7 +24,7 @@ export class LineChartComponent implements OnInit {
   lineChartColors: Color[] = [
     {
       borderColor: 'lightblue',
-      backgroundColor: 'rgba(30,144,255,0.28)',
+      backgroundColor: 'rgba(30,144,255,0.38)',
     },
   ];
 
