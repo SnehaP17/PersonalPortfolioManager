@@ -1,16 +1,29 @@
 <section>
+  <section>
+    <h2 class="market-movers-header">Market Movers
+    <mat-button-toggle-group [(ngModel)]="viewPrice" aria-label="Font Style" class="toggle_btn">
+      <mat-button-toggle value="percentChange">%</mat-button-toggle>
+      <mat-button-toggle value="stockPrice">$</mat-button-toggle>
+    </mat-button-toggle-group>
+  </h2>
+  </section>
+    <hr>
     <section>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             YOUR GAINERS
           </mat-expansion-panel-header>
-
           <ng-template matExpansionPanelContent>
             <ul *ngFor="let i of gainersRes" class="list-group">
                 <ul style="list-style-type:none;" class="list-group-item">
                     <p id='market-movers'>
                         <li>{{i.companyName}}</li>
-                        <li>{{i.percentChange}}%</li>
+                        <ng-template [ngIf]="viewPrice == 'percentChange'" [ngIfElse]="thenBlock">
+                          <li>{{i.percentChange}}%</li>
+                        </ng-template>
+                        <ng-template #thenBlock>
+                          <li>${{i.stockPrice}}</li>
+                        </ng-template>
                     </p>
                 </ul>
             </ul>
@@ -29,7 +42,12 @@
                     <ul style="list-style-type:none;" class="list-group-item">
                         <p id='market-movers'>
                             <li>{{i.companyName}}</li>
-                            <li>{{i.percentChange}}%</li>
+                            <ng-template [ngIf]="viewPrice == 'percentChange'" [ngIfElse]="thenBlock">
+                              <li>{{i.percentChange}}%</li>
+                            </ng-template>
+                            <ng-template #thenBlock>
+                              <li>${{i.stockPrice}}</li>
+                            </ng-template>
                         </p>
                     </ul>
                 </ul>
