@@ -11,18 +11,20 @@ export class MarketMoversComponent implements OnInit {
   gainersRes:any = null;
   losersRes:any = null;
   paramsObj:any = {companyName:'', id:1};
+  viewPrice:string = 'percentChange';
 
   constructor(private apiCallsService:ApicallsService) { }
 
   ngOnInit(): void {
     this.getMarketGainers();
     this.getMarketLosers();
+    this.tempFunc();
   }
 
   getMarketGainers(){
     this.apiCallsService.getCompanyGainers()
     .subscribe((data) => {
-      this.gainersRes = data; 
+      this.gainersRes = data;
     });
   }
 
@@ -31,6 +33,10 @@ export class MarketMoversComponent implements OnInit {
     .subscribe((data) => {
       this.losersRes = data; 
     });
+  }
+
+  tempFunc(){
+    console.log(`val is ${this.viewPrice}`);
   }
 
 }
