@@ -4,17 +4,22 @@ import { Color, Label } from 'ng2-charts';
 
 
 @Component({
-  selector: 'app-line-chart',
-  templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.css']
+  selector: 'app-line-chart-three',
+  templateUrl: './line-chart-three.component.html',
+  styleUrls: ['./line-chart-three.component.css']
 })
-export class LineChartComponent implements OnInit {
+export class LineChartThreeComponent implements OnInit {
+  
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
   lineChartData: ChartDataSets[] = [
-    { data: [18205,22429,26552,30761,32761,32761,36103,41226], label: '' },
+    { data: [9552, 12894, 14894, 19017, 23227, 25227,25227,28569.32692], label: '' },
   ];
 
-  lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June','July','August']
+  lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June','July','August'];
   //lineChartLabels: Label[] = []
 
   lineChartOptions = {
@@ -31,10 +36,5 @@ export class LineChartComponent implements OnInit {
   lineChartLegend = false;
   lineChartPlugins = [];
   lineChartType: ChartType = 'line';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
