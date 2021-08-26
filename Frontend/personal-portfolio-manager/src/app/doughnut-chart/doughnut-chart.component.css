@@ -1,2 +1,7 @@
 div {display:inline-block;
 }
+
+#cashflow {
+    display: flex;
+    justify-content: space-between;
+  }

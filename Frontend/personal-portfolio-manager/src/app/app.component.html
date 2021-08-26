@@ -12,13 +12,74 @@
     </div>
   </div>
 
-<div>
-  <app-line-chart></app-line-chart>
-  <app-doughnut-chart></app-doughnut-chart>
-  <app-other-doughnut-chart></app-other-doughnut-chart>
-</div>
+  <div class = 'col-md'>
+    <div class='row'>
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper">
+              <app-line-chart></app-line-chart>
+              <a href="#carousel__slide2"
+                 class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <app-line-chart></app-line-chart>
+            <a href="#carousel__slide1"
+               class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+               class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <app-line-chart></app-line-chart>
+            <a href="#carousel__slide2"
+               class="carousel__prev">Go to previous slide</a>
+      
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1"
+                 class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2"
+                 class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3"
+                 class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+        
+          </ol>
+        </aside>
+      </section>
+  
+  
+    </div>
+  
+    
+  <div class='row'>
+   <!-- <app-line-chart></app-line-chart> -->
+   <div class = 'col-sm'><app-doughnut-chart></app-doughnut-chart></div>
+   <div class = 'col-sm'> <app-other-doughnut-chart></app-other-doughnut-chart></div>
+    
+   
+  </div>
 
-<div style="background-color: Bisque">
+  </div>
+ 
+
+<div class='col-md' style="background-color: Bisque">
   <h2>Market Movers</h2>
   <app-market-movers ></app-market-movers>
 </div>

@@ -12,7 +12,7 @@ export class OtherDoughnutChartComponent implements OnInit {
   
   doughnutChartLabels: Label[] = [];
   doughnutChartData: MultiDataSet = [
-    [55, 25, 20]
+    [55, 5, 10, 13, 25, 20]
   ];
   doughnutChartType: ChartType = 'doughnut';
 
