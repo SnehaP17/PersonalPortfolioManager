@@ -35,7 +35,7 @@ export class DoughnutChartComponent implements OnInit {
 
 
 
-  doughnutChartLabels: Label[] = [];
+  doughnutChartLabels: Label[] = ['cash1', 'cash2', 'cash3'];
   doughnutChartData: MultiDataSet = [[34,56,333]]
   doughnutChartType: ChartType = 'doughnut';
   

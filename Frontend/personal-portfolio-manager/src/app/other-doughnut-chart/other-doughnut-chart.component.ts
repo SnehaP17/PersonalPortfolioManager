@@ -10,9 +10,9 @@ import { MultiDataSet, Label } from 'ng2-charts';
 export class OtherDoughnutChartComponent implements OnInit {
 
   
-  doughnutChartLabels: Label[] = [];
+  doughnutChartLabels: Label[] = ['spend1', 'spend2', 'spend3'];
   doughnutChartData: MultiDataSet = [
-    [55, 5, 10, 13, 25, 20]
+    [55, 5, 10]
   ];
   doughnutChartType: ChartType = 'doughnut';
 
