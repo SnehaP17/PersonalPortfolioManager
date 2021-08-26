@@ -10,6 +10,7 @@ export class CashFlowComponent implements OnInit {
 
   cashRes:any = null;
   cashSum:any = null;
+  panelOpen:boolean = false;
   constructor(private apiCallsService:ApicallsService) { }
 
   ngOnInit(): void {

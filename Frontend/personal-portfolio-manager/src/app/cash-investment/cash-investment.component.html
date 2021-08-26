@@ -1,8 +1,11 @@
 <section>
-    <h2>
+    <mat-expansion-panel (opened)="panelOpen = true"
+    (closed)="panelOpen = false">
+     <mat-expansion-panel-header>
+        <mat-panel-title>
         Investment  &nbsp; ${{investmentSum}}
-    </h2>
-    <hr>
+     </mat-panel-title>
+    </mat-expansion-panel-header>
     <div>
         <ul *ngFor="let i of investmentRes" class="list-group">
             <li class="list-group-item">
@@ -15,4 +18,5 @@
             </li>
         </ul>
     </div>
+</mat-expansion-panel>
 </section>
